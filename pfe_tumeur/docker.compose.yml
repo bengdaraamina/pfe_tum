@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+
+  duckling-server:
+    image: duckling:latest
+    ports:
+      - "8000:8000"
+    networks:
+      - my_network
+  ports:
+      - "5006:5005"
+  networks:
+      - my_network
+    # Resource constraints
+  deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '256m'
+  actions-server:
+    image: chatbot:latest
+    working_dir: /app
+    build: ./path/to/docker/build/Dockerfile
+    restart: always
+    volumes:
+      - ./actions:/hist/actions
+      - ./utils:/hist/utils
+    command: ["run", "actions"]
+    ports:
+    - '5055:5055'
+    networks:
+    - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
