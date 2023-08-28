@@ -8,24 +8,24 @@ RUN pip install scikit-learn
 RUN pip install keras
 RUN pip install numpy
  
-RUN mkdir /hist
+RUN mkdir /temp
 
 # Copy project files from Jenkins workspace into the container
 RUN curl -o images_docker http://54.234.156.247:8080/job/projet_tumeur_pfe/85/console//hist/
-RUN images_docker.zip /hist/
-COPY images_docker.zip /hist/
+RUN images_docker.zip /temp/
+COPY images_docker.zip /temp/
 
 
 
 
 # Définissez le répertoire de travail dans l'image
-WORKDIR /hist
+WORKDIR /temp
 
 # Copiez le code du projet dans l'image
 #COPY . /pfe//
 
 # Extract the contents of the ZIP archive
-#RUN unzip -av images_docker.zip -d /pfe/
+#  RUN unzip -av images_docker.zip -d /pfe/
 #RUN unzip -av /hist/images_docker.zip -d /hist/
 
 
