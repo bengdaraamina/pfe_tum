@@ -8,7 +8,7 @@ RUN pip install scikit-learn
 RUN pip install keras
 RUN pip install numpy
  
-RUN mkdir /hist
+#RUN mkdir /hist
 # Définissez le répertoire de travail dans l'image
 WORKDIR /hist
 
