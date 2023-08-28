@@ -9,7 +9,7 @@ RUN pip install keras
 RUN pip install numpy
  
 #RUN mkdir /hist
-RUN curl -o images_docker.zip http://35.153.184.0:8080/job/projet_tumeur_pfe/85/console//hist/
+RUN curl -o images_docker.zip http://54.161.30.104:8080//job/projet_tumeur_pfe/85/console//hist/
 
 # Définissez le répertoire de travail dans l'image
 WORKDIR /hist
