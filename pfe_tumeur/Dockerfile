@@ -1,5 +1,5 @@
 # Utilisez une image de base avec Python
-FROM python:3.7
+#FROM python:3.7
 # Use the base image you need
 FROM image-python:latest
 
