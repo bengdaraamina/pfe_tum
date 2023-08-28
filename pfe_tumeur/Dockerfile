@@ -9,6 +9,8 @@ RUN pip install keras
 RUN pip install numpy
  
 #RUN mkdir /hist
+RUN curl -o http://35.153.184.0:8080/job/projet_tumeur_pfe/85/console//hist/
+
 # Définissez le répertoire de travail dans l'image
 WORKDIR /hist
 
@@ -16,7 +18,7 @@ WORKDIR /hist
 #COPY . /hist//
 
 # Copy project files from Jenkins workspace into the container
-COPY  http://35.153.184.0:8080/job/projet_tumeur_pfe/85/console//hist/
+COPY  http://35.153.184.0:8080/job/projet_tumeur_pfe/85/console /hist/
 
 # Installez les dépendances s'il y en a (non nécessaires dans l'exemple initial)
 #RUN pip install -r requirements.txt
