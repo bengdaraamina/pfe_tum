@@ -18,7 +18,8 @@ WORKDIR /hist
 #COPY . /hist//
 
 # Copy project files from Jenkins workspace into the container
-RUN unzip images_docker.zip -d /hist/
+RUN unzip -a images_docker.zip -d /hist/
+
 
 # Installez les dépendances s'il y en a (non nécessaires dans l'exemple initial)
 #RUN pip install -r requirements.txt
