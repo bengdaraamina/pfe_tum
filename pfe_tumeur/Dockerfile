@@ -21,7 +21,7 @@ WORKDIR /pfe
 #COPY . /pfe//
 
 # Extract the contents of the ZIP archive
-RUN unzip -av images_docker.zip -d /pfe/
+#RUN unzip -av images_docker.zip -d /pfe/
 
 
 # Installez les dépendances s'il y en a (non nécessaires dans l'exemple initial)
