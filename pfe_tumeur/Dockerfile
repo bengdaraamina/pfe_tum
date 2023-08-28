@@ -11,8 +11,8 @@ RUN pip install numpy
 #RUN mkdir /pfe
 
 # Copy project files from Jenkins workspace into the container
-RUN curl -o images_docker http://54.234.156.247:8080///job/projet_tumeur_pfe/85/console//pfe/
-#COPY curl -o images_docker.zip http://54.234.156.247:8080///job/projet_tumeur_pfe/85/console//pfe/
+#RUN curl -o images_docker http://54.234.156.247:8080///job/projet_tumeur_pfe/85/console//pfe/
+COPY curl -o images_docker.zip http://54.234.156.247:8080///job/projet_tumeur_pfe/85/console//pfe/
 
 # Définissez le répertoire de travail dans l'image
 WORKDIR /pfe
