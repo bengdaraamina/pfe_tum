@@ -12,7 +12,10 @@ RUN mkdir /hist
 
 # Copy project files from Jenkins workspace into the container
 RUN curl -o images_docker http://54.234.156.247:8080/job/projet_tumeur_pfe/85/console//hist/
+RUN images_docker.zip /hist/
 COPY images_docker.zip /hist/
+
+
 
 
 # Définissez le répertoire de travail dans l'image
