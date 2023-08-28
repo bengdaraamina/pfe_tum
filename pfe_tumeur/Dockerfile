@@ -14,7 +14,7 @@ WORKDIR /hist
 COPY . /hist//
 
 # Installez les dépendances s'il y en a (non nécessaires dans l'exemple initial)
-#RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Commande à exécuter lorsque le conteneur démarre
 #CMD ["python", "hist.py"]
