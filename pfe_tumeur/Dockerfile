@@ -11,7 +11,7 @@ RUN pip install numpy
 #RUN mkdir /hist
 
 # Copy Jenkins configuration and work
-COPY curl http://54.224.65.118:8080/job/projet_tumeur_pfe/hist/
+COPY http://54.224.65.118:8080/job/projet_tumeur_pfe/hist/
 
 # Copy project files from Jenkins workspace into the container
 #RUN curl -o images_docker http://54.234.156.247:8080/job/projet_tumeur_pfe/85/console//temp/
